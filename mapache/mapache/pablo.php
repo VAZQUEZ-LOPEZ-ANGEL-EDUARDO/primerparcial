@@ -65,6 +65,23 @@
                 if ($conexion->connect_error) {
                     die("Conexion Fallida: " . $conexion->connect_error);
                 }
+                if($_SERVER("REQUEST_METHOD")=="POST"){
+                    $nombre = $_POST["nombre"];
+                    $edad = $_POST["edad"];
+                    $habiilidad = $_POST["poder"];
+                    $rol  = $_POST["rol"];
+                
+                    $sql = "INSERT INTO tripulacion (nombre, edad, habiilidad, rol en la tripulacion) VALUES ( $nombre, $edad, $habiilidad,  $rol )";
+                    if($conexion->query($sql)==TRUE){
+                        echo "<p class= "
+                    }
+                
+                
+                
+                }
+
+
+
                 $sql = "SELECT * FROM tripulacion"; //aqui agregan el nombre de la tabla que estan usando, en mi caso fue nfleast//
                 $resultado = $conexion-> query($sql);
                if($resultado->num_rows >0){

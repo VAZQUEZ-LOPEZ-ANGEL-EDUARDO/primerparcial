@@ -27,7 +27,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="http://localhost/mapache/index.php" style="color: #000;">mostrar datos</a><br>
                             <a class="dropdown-item" href="http://localhost/mapache/index.php" style="color: #000;">mostras Datos</a><br>
-                            <a class="dropdown-item" href="http://localhost/mapache/index.php" style="color: #000;">meter Datos</a><br>
+                            <a class="dropdown-item" href="http://localhost/mapache/pablo3.php" style="color: #000;">meter Datos</a><br>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -54,7 +54,28 @@
             </div>
             </nav>
             <div class="jumbotron text-center" style="background-color: white;">
-                <h1 class="display-4" style="font-family:'Apes On Parade', sans-serif; color: #0d8eb2;">tripulacion oficial</h1>
+                <h1 class="display-4" style="font-family:'Apes On Parade', sans-serif; color: #0d8eb2;">Meter datos</h1>
+
+<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] ); ?>" method="post" id="formulario">
+
+    <label for="Nombre">Nombre:</label>
+    <input type="text" id="Nombre" name="Nombre" required> <br>
+    
+    <label for="Alias">Alias:</label>
+    <input type="text" id="Alias" name="Alias" required><br>
+    
+    <label for="FechaDeCreacion">Fecha de Creación:</label>
+    <input type="text" id="FechaDeCreacion" name="FechaDeCreacion" required><br>
+    
+    <label for="Descripcion">Descripción:</label>
+    <input type="text" id="Descripcion" name="Descripcion" required><br>
+    
+    <input type="submit" value="Agregar registro">
+</form>
+
+
+
+
                 <?php 
                 $username = "root";
                 $password = "";
